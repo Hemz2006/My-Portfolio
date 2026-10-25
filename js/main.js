@@ -227,10 +227,27 @@
     let id = null;
     if (/^[1-8]$/.test(e.key)) id = order[Number(e.key) - 1];
     else if (e.key === 'r' || e.key === 'R') id = 'resume';
-    if (!id) return;
-    document.getElementById(id).scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth' });
-    history.replaceState(null, '', '#' + id);
+    if (id) goTo(document.getElementById(id));
   });
+
+  /* In-page links scroll without adding #section to the address bar */
+  function goTo(target) {
+    const offset = parseFloat(getComputedStyle(root).scrollPaddingTop) || 0;
+    const top = target === document.body ? 0 : target.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top, behavior: reducedMotion ? 'auto' : 'smooth' });
+    if (!target.matches('a, button, input, [tabindex]')) target.setAttribute('tabindex', '-1');
+    target.focus({ preventScroll: true });
+  }
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href^="#"]');
+    if (!a || e.ctrlKey || e.metaKey || e.shiftKey) return;
+    const target = a.getAttribute('href') === '#top' ? document.body : document.getElementById(a.getAttribute('href').slice(1));
+    if (!target) return;
+    e.preventDefault();
+    goTo(target);
+  });
+  // an old shared link like /#resume still lands on the section, then the URL is tidied
+  if (location.hash) window.addEventListener('load', () => history.replaceState(null, '', location.pathname + location.search));
 
   $('#year').textContent = new Date().getFullYear();
 })();
