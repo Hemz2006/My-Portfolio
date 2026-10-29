@@ -18,6 +18,7 @@ Every image slot shows a labelled placeholder until a file exists at its path. D
 | --- | --- |
 | Résumé (PDF) | `assets/Hemanth_Varma_Kanumuri_Resume.pdf` (in) |
 | Résumé preview image | `assets/images/resume-preview.png` (in, page 1 of the PDF) |
+| Publication certificate | `assets/images/publications/legalassist-certificate.webp` (in) |
 | Your photo (square) | `assets/images/profile.jpg` (in) |
 | Achievements | All in: `legalassist.webp`, `ethical-hacking.jpg`, `genai-iith.jpg`, `python-assessment.jpg` |
 | Internships | `assets/images/internships/gamuverse-1.jpg` (in). Other internships are text only. |

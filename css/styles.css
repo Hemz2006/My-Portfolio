@@ -196,7 +196,7 @@ h3 {
 .brackets::after { right: -8px; bottom: -8px; border-bottom: 3px solid var(--coin); border-right: 3px solid var(--coin); }
 
 .jump { position: relative; display: flex; flex-direction: column; gap: 10px; margin-top: 40px; }
-.jump__grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; }
+.jump__grid { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 8px; }
 .jump__grid a {
   display: flex; flex-direction: column; gap: 2px;
   background: var(--void); border: 2px solid var(--line); padding: 10px 12px;
@@ -255,6 +255,19 @@ h3 {
 .ach--wide .ach__img { aspect-ratio: auto; min-height: 260px; border-bottom: 0; border-right: 2px solid var(--line); }
 .ach--wide .ach__body { padding: 28px; justify-content: center; gap: 12px; }
 .ach--wide h3 { font-size: clamp(30px, 3vw, 40px); }
+
+/* Publications */
+.pub { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); border-color: var(--coin); }
+.pub__body { padding: 28px; display: flex; flex-direction: column; gap: 16px; }
+.pub h3 { font-size: clamp(28px, 2.6vw, 36px); }
+.pub__meta { display: flex; flex-direction: column; gap: 10px; }
+.pub__meta dd { margin: 2px 0 0; }
+.pub__points { display: flex; flex-direction: column; gap: 10px; }
+.pub__points li { padding-left: 18px; position: relative; }
+.pub__points li::before { content: "▸"; position: absolute; left: 0; color: var(--coin); }
+.pub__actions { display: flex; flex-wrap: wrap; gap: 14px; }
+.pub__cert { padding: 28px; border-left: 2px solid var(--line); display: flex; flex-direction: column; gap: 12px; }
+.pub__cert .ph { aspect-ratio: 1.414 / 1; }
 
 /* "Unlock" on scroll: greyed until it enters the viewport */
 .js .unlock { filter: grayscale(1); opacity: .45; transform: translateY(16px); transition: filter .6s ease, opacity .6s ease, transform .6s ease; }
@@ -469,6 +482,8 @@ h3 {
   .ach-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .ach--wide { grid-template-columns: minmax(0, 1fr); }
   .ach--wide .ach__img { min-height: 0; aspect-ratio: 16 / 10; border-right: 0; border-bottom: 2px solid var(--line); }
+  .pub { grid-template-columns: minmax(0, 1fr); }
+  .pub__cert { border-left: 0; border-top: 2px solid var(--line); }
   .job, .job:has(.job__photos) { grid-template-columns: minmax(0, 1fr); }
   .interests { grid-template-columns: minmax(0, 1fr); }
   .resume__grid { grid-template-columns: minmax(0, 1fr); }

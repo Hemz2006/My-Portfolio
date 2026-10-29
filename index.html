@@ -49,6 +49,7 @@
         <a href="#home" data-section="home">Home</a>
         <a href="#grades" data-section="grades">Grades</a>
         <a href="#achievements" data-section="achievements">Achievements</a>
+        <a href="#publications" data-section="publications">Publications</a>
         <a href="#projects" data-section="projects">Projects</a>
         <a href="#internships" data-section="internships">Internships</a>
         <a href="#hobbies" data-section="hobbies">Hobbies</a>
@@ -64,6 +65,7 @@
     <a href="#home">Home</a>
     <a href="#grades">Grades</a>
     <a href="#achievements">Achievements</a>
+    <a href="#publications">Publications</a>
     <a href="#projects">Projects</a>
     <a href="#internships">Internships</a>
     <a href="#hobbies">Hobbies</a>
@@ -113,6 +115,7 @@
         <nav class="jump__grid" aria-label="Jump to section">
           <a href="#grades">Grades</a>
           <a href="#achievements">Achievements</a>
+          <a href="#publications">Publications</a>
           <a href="#projects">Projects</a>
           <a href="#internships">Internships</a>
           <a href="#hobbies">Hobbies</a>
@@ -198,7 +201,44 @@
       </div>
     </section>
 
-    <!-- 04 PROJECTS -->
+    <!-- 04 PUBLICATIONS -->
+    <section class="section" id="publications" aria-labelledby="pub-h">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 id="pub-h">Publications</h2>
+        </div>
+        <article class="pub panel">
+          <div class="pub__body">
+            <p class="label label--gold">Journal paper · MDPI · 2026</p>
+            <h3>LegalAssist: A Temporally Aware Retrieval-Augmented Generation System for Searching Indian Court Judgments</h3>
+            <dl class="pub__meta">
+              <div><dt class="label">Authors</dt><dd><b>Hemanth Varma Kanumuri</b>, Jakkidi Pradyun, Sreeja Moganty, Rishiraj Bhardwaj, Nidhi Goyal</dd></div>
+              <div><dt class="label">Published in</dt><dd><i>Engineering Proceedings</i> 2026, Volume 143, Issue 1, 86 (MDPI)</dd></div>
+            </dl>
+            <p>An open-source system that helps advocates and law students search Indian Supreme Court and High Court judgments and get legal answers backed by real sources. Paid legal databases are expensive, and general-purpose chatbots often invent case law. LegalAssist tackles both with a retrieval-augmented generation (RAG) pipeline that runs on consumer hardware.</p>
+            <ul class="pub__points">
+              <li><b>Search:</b> combines keyword search (BM25) with meaning-based search (FAISS), then reranks the results and gives more weight to higher courts.</li>
+              <li><b>Safeguards:</b> checks whether a law is still in force (for example, IPC to Bharatiya Nyaya Sanhita), verifies citations, and declines to answer when it isn't confident.</li>
+              <li><b>Answers:</b> written in the FIRAC format (Facts, Issues, Rule, Application, Conclusion) with GPT-4o-mini or a local Qwen model.</li>
+              <li><b>Finding:</b> on the IL-TUR benchmark, plain BM25 was the strongest retriever. The main contribution is an open, reproducible pipeline that reduces unsupported legal answers.</li>
+            </ul>
+            <ul class="tags" aria-label="Topics"><li>RAG</li><li>NLP</li><li>Information retrieval</li><li>LLMs</li><li>Legal AI</li></ul>
+            <div class="pub__actions">
+              <a class="btn btn--gold" href="https://www.mdpi.com/2673-4591/143/1/86" target="_blank" rel="noopener">Read the paper ↗</a>
+            </div>
+          </div>
+          <div class="pub__cert">
+            <p class="label">Certificate of publication</p>
+            <figure class="ph ph--doc" data-label="Certificate of publication">
+              <img src="assets/images/publications/legalassist-certificate.webp" alt="MDPI Certificate of Publication for the LegalAssist paper, Engineering Proceedings 2026, Volume 143, Issue 1, 86, issued in Basel, October 2026" loading="lazy">
+            </figure>
+            <a class="link" href="assets/images/publications/legalassist-certificate.webp" target="_blank" rel="noopener">View certificate full size ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 05 PROJECTS -->
     <section class="section" id="projects" aria-labelledby="proj-h">
       <div class="wrap">
         <div class="section__head section__head--split">
@@ -329,7 +369,7 @@
       </div>
     </section>
 
-    <!-- 05 INTERNSHIPS -->
+    <!-- 06 INTERNSHIPS -->
     <section class="section" id="internships" aria-labelledby="int-h">
       <div class="wrap">
         <div class="section__head">
@@ -381,7 +421,7 @@
       </div>
     </section>
 
-    <!-- 06 HOBBIES -->
+    <!-- 07 HOBBIES -->
     <section class="section" id="hobbies" aria-labelledby="hob-h">
       <div class="wrap">
         <div class="section__head section__head--split">
@@ -419,7 +459,7 @@
       </div>
     </section>
 
-    <!-- 07 SPORTS & INTERESTS -->
+    <!-- 08 SPORTS & INTERESTS -->
     <section class="section" id="interests" aria-labelledby="int2-h">
       <div class="wrap">
         <div class="section__head">
@@ -446,7 +486,7 @@
       </div>
     </section>
 
-    <!-- 08 RESUME -->
+    <!-- 09 RESUME -->
     <section class="section resume pix" id="resume" aria-labelledby="res-h">
       <div class="wrap resume__grid">
         <figure class="resume__sheet ph ph--light" data-label="Résumé preview">

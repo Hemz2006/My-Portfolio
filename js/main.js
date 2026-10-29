@@ -205,8 +205,8 @@
     }
   });
 
-  /* Keyboard: 1–8 jump to a section, R for résumé, any key skips the intro */
-  const order = ['home', 'grades', 'achievements', 'projects', 'internships', 'hobbies', 'interests', 'resume'];
+  /* Keyboard: 1–9 jump to a section, R for résumé, any key skips the intro */
+  const order = ['home', 'grades', 'achievements', 'publications', 'projects', 'internships', 'hobbies', 'interests', 'resume'];
   const konami = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
   let konamiPos = 0;
   document.addEventListener('keydown', (e) => {
@@ -225,7 +225,7 @@
     const t = e.target;
     if (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName)) return;
     let id = null;
-    if (/^[1-8]$/.test(e.key)) id = order[Number(e.key) - 1];
+    if (/^[1-9]$/.test(e.key)) id = order[Number(e.key) - 1];
     else if (e.key === 'r' || e.key === 'R') id = 'resume';
     if (id) goTo(document.getElementById(id));
   });
